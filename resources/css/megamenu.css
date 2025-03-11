@@ -1,0 +1,335 @@
+:root {
+    --background-color: #f1f1f1;
+    --hover-color: rgb(102, 40, 245);
+}
+
+a {
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+body {
+    overflow-x: hidden;
+    font-family: "Rubik", sans-serif;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    background: var(--background-color);
+    box-shadow: 0px 5px 15px 0px rgba(212, 201, 201, 0.75);
+}
+.logo a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #353535;
+    text-transform: uppercase;
+}
+
+/* normal menu css */
+
+.main_menu > ul > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 -2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main_menu ul li {
+    position: relative;
+}
+
+.main_menu ul li a {
+  position: relative;
+  font-size: 20px;
+  color: #353535;
+  padding: 20px 25px;
+  display: block;
+  padding-left: 10px;
+  font-weight: bold;
+  text-decoration: none; /* Remove default underline */
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* ends here */
+/* mega menu css */
+.mega_menu_dropdown {
+    position: static !important;
+}
+.menu-section{
+    padding-left: 0px;
+    padding-right: 10px;
+}
+.instrument-section{
+    margin-right: 20px;
+}
+.mega_menu {
+    left: 0px;
+    right: 0px;
+    background: #fff;
+    max-height: 400px; /* Adjust as needed */
+    /* overflow-y: auto; */
+    padding-right: 10px; /* Optional to add space for scrollbar */
+    border: 0px solid #ccc; /* Optional: to visualize the menu container */
+    display: flex;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; Enables horizontal scrolling */
+    padding: 10px;
+    cursor: grab;
+    white-space: nowrap;
+    position:fixed;
+    transition: 0.5s;
+    box-shadow: 0px 5px 15px 0px rgba(212, 201, 201, 0.75);
+}
+
+.megamenu-container{
+    padding-top: 38px;
+    padding-bottom: 143px;
+}
+
+
+.mobile_btn {
+    display: none;
+}
+
+/* responsive css */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        width: 960px;
+    }
+    .mega_menu_demo_2 .mega_menu {
+        width: 940px;
+    }
+    .main_menu ul li ul {
+        width: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        width: 720px;
+    }
+    .mega_menu_demo_2 .mega_menu {
+        width: 700px;
+    }
+    .main_menu ul li a {
+        font-size: 15px;
+        padding: 20px 16px;
+    }
+    .main_menu ul li ul {
+        width: 150px;
+    }
+}
+@media (min-width: 768px) {
+    .main_menu ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        margin-top: 50px;
+    }
+    .main_menu ul li .mega_menu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        margin-top: 50px;
+    }
+    .main_menu ul li:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0px;
+        z-index: 99;
+    }
+    .main_menu ul li:hover > .mega_menu {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0;
+        z-index: 99;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mega_menu_demo_2 .mega_menu,
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        padding: 15px;
+    }
+    .mobile_btn {
+        cursor: pointer;
+        display: block;
+    }
+
+    .main_menu {
+        display: none;
+        width: 100%;
+
+        /* margin-left: 200px; */
+    }
+
+    .main_menu ul li {
+        display: block;
+    }
+    .main_menu ul li a i {
+        float: right;
+    }
+    .main_menu ul li a {
+        border-bottom: 1px solid #ddd;
+    }
+    .main_menu ul li ul {
+        width: 100%;
+    }
+    .main_menu ul li ul li ul {
+        left: 0;
+        top: auto;
+    }
+
+    .main_menu ul li ul {
+        display: none;
+        transition: none;
+    }
+    .main_menu ul li .mega_menu {
+        display: none;
+        transition: none;
+    }
+
+    .mega_menu_demo_2 .mega_menu {
+        transform: translateX(0);
+    }
+}
+
+/* Each menu item style */
+.mega_menu_item {
+    display: inline-block; /* Ensures items are placed horizontally */
+    margin-left: 200px;
+    width: 80px; /* Fixed width for each card */
+    position: center;
+    padding: 1px;
+    cursor: pointer; /* Changes cursor to pointer for clickable items */
+}
+
+/* Card container for each item */
+
+/* Hover info for additional content */
+.mega_menu_item .hover-info {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.mega_menu_item:hover .hover-info {
+    display: block; /* Show on hover */
+}
+
+/* Custom scrollbar styles */
+.mega_menu::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar height */
+}
+
+.mega_menu::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Scrollbar thumb color */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+}
+.card-image-text {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    white-space: pre-line; /* This ensures that line breaks are preserved */
+    width: 100%; /* Ensure the text container matches the width of the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adjust padding as needed */
+}
+.mega_menu::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+    border-radius: 5px; /* Rounded corners for the scrollbar track */
+}
+
+/* Cursor styling to indicate more items are available */
+.mega_menu:hover {
+    cursor: grab; /* Indicates the user can drag to scroll */
+}
+
+/* Styling for the selected item info */
+.selected-item-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+.mega-menu-head-h2{
+  text-align: left;
+  margin-left:200px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: Courier New;
+  
+}
+.mega-menu-hr {
+  border-left: 0.5px solid #afc4c2;  /* Change border to left for vertical line */
+  height: 100%;  /* Adjust the height as needed, 100% will make it span the full height of its container */
+  margin: 0 10px;  /* Adjust margin for spacing between elements */
+  height: auto;
+}
+/* new added */
+
+.fixed-nav{
+    position: fixed;
+    /* top: 35px; */
+    /* left: 0; */
+    width: 100%;
+    /* height: 50px; */
+    z-index: 1000;
+    background: #fff;
+    /* box-shadow: 0px 5px 15px 0px rgba(212, 201, 201, 0.75); */
+}
+
+
+

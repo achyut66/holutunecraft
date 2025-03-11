@@ -1,0 +1,49 @@
+/* Main container style */
+.track-myorder-container {
+    width: 80%; /* Sets the width of the container */
+    max-width: 1000px; /* Prevents the container from becoming too wide */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 30px; /* Adds space around the content */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle floating effect */
+    font-family: 'Arial', sans-serif; /* Font family for readability */
+    line-height: 1.6; /* Increases line height for better readability */
+    text-align: left; /* Aligns all text to the left by default */
+    color: #333; /* Sets the text color to a dark gray */
+}
+
+/* Heading styles */
+ .trackClass {
+    /* font-size: 1.8rem; Slightly smaller for subheadings */
+    color: #010a10; /* Blue color for subheadings */
+    font-weight: bold;
+}
+
+/* Paragraph text styling */
+p {
+    font-size: 1rem; /* Default font size for paragraphs */
+    color: #555; /* Lighter gray for paragraph text */
+    margin-bottom: 20px; /* Adds space below paragraphs */
+    text-align: justify; /* Justifies the text for better readability */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .terms-container {
+        width: 90%; /* Reduces container width on smaller screens */
+        padding: 20px; /* Reduces padding for smaller devices */
+    }
+
+    h1 {
+        font-size: 2rem; /* Slightly smaller heading on mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller subheading on mobile */
+    }
+
+    p {
+        font-size: 0.95rem; /* Slightly smaller text for mobile */
+    }
+}

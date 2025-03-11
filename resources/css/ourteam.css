@@ -1,0 +1,75 @@
+/* General styles for the team container */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Team card styling */
+.team-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside each card */
+.team-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Team information section */
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Team name and position styling */
+.team-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-position {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* List of team details */
+.team-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Bold style for labels */
+.bold {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for the email link */
+.team-email {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.team-email:hover {
+    text-decoration: underline;
+}

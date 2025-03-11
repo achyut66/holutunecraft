@@ -1,0 +1,124 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #cbc7c7;
+  color: white;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #4caf50; /* Highlight color on hover */
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show links when menu is open */
+  }
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  transition: width 0.3s ease;
+}
+
+.sidebar-container {
+  display: flex;
+  margin-top: 70px;
+  margin-left: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  height: 100%;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.sidebar-links li {
+  margin: 15px 0;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar-links a:hover {
+  color: #4caf50; /* Highlight color on hover */
+}
+
+/* Main content styling */
+.main-content {
+  margin-top: 60px; /* Ensure content doesn't get hidden under navbar */
+  margin-left: 250px; /* Leave space for sidebar */
+  padding: 20px;
+}

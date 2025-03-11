@@ -1,0 +1,421 @@
+/* General Reset for padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Header Container */
+  .header-container {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Top Header (social and links) */
+
+  .top-header-nav {
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top of the page */
+    left: 0; /* Position it at the left edge */
+    width: 100%; /* Make it span the full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    height: 40px;
+    background-color: #afc4c2;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+  
+  .social-icons {
+    list-style-type: none;
+    display: flex;
+    margin-left: 20px;
+  }
+  
+  .social-icons li {
+    margin-right: 20px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .menu-left{
+    display: flex;
+    list-style-type: none;
+    text-transform: capitalize;
+    margin-left: -600px;
+    
+  }
+
+  .menu-right {
+    display: flex;
+    list-style-type: none;
+    text-transform: capitalize;
+    
+  }
+  
+  .menu-left li,
+  .menu-right li {
+    margin-right: 15px;
+    text-transform: capitalize;
+  }
+  
+  .menu-left li a,
+  .menu-right li a {
+    color: #333;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  
+  .menu-right li a span {
+    margin-left: 5px;
+  }
+  
+  /* middle Container */
+  .header-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    flex-direction: column;
+}
+.header-right {
+  display: flex;
+  align-items: right;
+  justify-content: flex-end;
+  gap: 15px; /* Space between icon and text */
+}
+
+/* Logo Styling */
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Menu Bar */
+.menu-bar {
+    width: 100%;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centering menu */
+    gap: 20px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.menu-bar li {
+    text-align: center;
+}
+
+.menu-bar li a {
+    color: #312b2b;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.menu-bar li a:hover {
+    /* background-color: #007bff; */
+    border-radius: 4px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-bar {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f8f8f8;
+        width: 100%;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .menu-bar.active {
+        display: flex;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+  /* ends middle container */
+  
+  
+  /* Mobile and Small Screen Adjustments */
+  @media screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menuBar ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .menuBar ul li {
+      margin-bottom: 10px;
+    }
+  
+    .header-icons {
+      margin-top: -30px;
+    }
+  }
+
+  /* newly added */
+
+.register{
+    color:blue;
+    font-weight: bold;
+}
+#guestlayout{
+    margin-top: -20px;
+}
+#loginlogo{
+    height: 140px;
+    width: 180px;
+    margin-top: -250px;
+}
+#guestchildren{
+    margin-top: -115px;
+}
+/* footer */
+
+.footer-container {
+    background-color: #afc4c2;
+    padding: 40px 20px;
+    display: flex;
+    color:#312b2b;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    color: #312b2b;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+.headname{
+    color: #312b2b;
+    font-weight: bold;
+    text-shadow: #f8f8f8;
+    text-decoration: underline;
+    margin-top: 0px;
+}
+.paragraph{
+    color: #312b2b;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+.footul{
+    margin-top: 20px;
+}
+/* .footer-column h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+} */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #312b2b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.copyright {
+    text-align: center;
+    color: #312b2b;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+/* navigation menu */
+.navigation-menu a {
+  position: relative;
+  text-decoration: none;
+  color: #312b2b; /* Default text color */
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.navigation-menu a:hover {
+  color: #afc4c2; /* Change text color to blue on hover */
+}
+.header-ends{
+  border: 2px solid #afc4c2;
+}
+.navigation-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Controls the underline position */
+  width: 100%;
+  height: 2px; /* Thickness of underline */
+  background-color: #afc4c2;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation-menu a:hover::after {
+  transform: scaleX(1); /* Underline appears smoothly */
+}
+
+/* ends here */
+
+/* Style for submenu itself *//* Submenu container */
+.submenu {
+  background-color:#afc4c2; /* Background black */
+  color: #333; /* Text color white */
+  padding: 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%; /* Ensures it appears below the parent menu */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the submenu */
+  width: 80%; /* Adjust width as needed */
+  max-width: 800px; /* Limits max width */
+  z-index: 1000;
+}
+
+/* Remove table borders */
+.borderless {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Submenu rows */
+.submenu table tr {
+  display: flex;
+  align-items: center;
+}
+
+/* Category text */
+.category a {
+  color: #312b2b; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px;
+  display: block;
+  width: 200px;
+}
+
+/* Hover effect for category */
+.category:hover a {
+  color: #007bff; /* Change to blue on hover */
+}
+
+/* Vertical separator */
+.separator {
+  width: 2px;
+  background-color: white; /* White vertical line */
+  height: 100%;
+  margin: 0 15px;
+}
+
+/* Category data */
+.cat-datas {
+  flex: 1;
+  color: #312b2b; /* Default hidden */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show data when hovered */
+tr:hover .cat-datas {
+  opacity: 1;
+}
+/* payment method */
+
+.payment-methods {
+  display: flex;
+  justify-content: left; /* Align the items in the center */
+  align-items: left;     /* Vertically center the icons */
+  gap: 10px;               /* Add some space between the icons */
+}
+
+.payment-icon {
+  display: inline-block; /* Ensure each icon is treated as an inline block */
+}
+
+.cart-count-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 5px;
+  font-size: 0.8em;
+  position: absolute;
+  top: 1px;
+  right: 5px;
+}
+
+
+
+

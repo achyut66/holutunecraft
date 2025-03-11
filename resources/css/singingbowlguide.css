@@ -1,0 +1,51 @@
+/* Styling the container */
+.guide-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Style for each row */
+.singing-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Style for each column inside rows */
+.col {
+    flex: 1; /* Makes the columns take equal width */
+    padding: 10px;
+    border: 0px solid #ccc; /* Light border for each column */
+    margin: 0 10px; /* Spacing between columns */
+    background-color: #f9f9f9; /* Light background for the columns */
+}
+
+/* Styling for h2 tags */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Adds space below the h2 element */
+    text-align: center; /* Centers the text */
+    color: #333; /* Dark text color */
+}
+
+/* Styling for paragraph tags */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter text color */
+    text-align: justify; /* Justifies the text for better readability */
+}
+
+/* Optional: Add some padding for text inside columns */
+.col p {
+    padding: 10px 0;
+}
+
+/* Optional: Style for a special row or highlight if needed */
+.row.special {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
